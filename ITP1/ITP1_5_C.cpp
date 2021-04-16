@@ -17,13 +17,18 @@ int main() {
   {
     REP(i, A){
       REP(j,B){
-        if(i==0 || i==A-1){
-          cout << "#";
-        }else{
-          if(j==0 || j==B-1){
+        if(i%2 == 0){
+          if(j%2 == 0){
             cout << "#";
           }else{
-            cout << "."; 
+            cout << ".";
+          }
+        }
+        if(i%2 != 0){
+          if(j%2 == 0){
+            cout << ".";
+          }else{
+            cout << "#";
           }
         }
       }
